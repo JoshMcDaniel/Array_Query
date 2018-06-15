@@ -1,4 +1,4 @@
-import java.util.Scanner;
+import javax.swing.*;
 
 public class PracticeClass {
 
@@ -6,11 +6,9 @@ public class PracticeClass {
 		
 		String[] arr = {"Trevor", "Erin", "Jonathan", "Phill", "Josh", "Bob"};
 		
-		Scanner input = new Scanner(System.in);
+		JFrame input = new JFrame();
+		String name = JOptionPane.showInputDialog(input, "Enter name: ");
 		
-		System.out.println("Enter Name: ");
-		
-		String name = input.nextLine();
 		int i = 0;
 		boolean found = false;
 		
@@ -20,9 +18,7 @@ public class PracticeClass {
 				break;
 			}
 		}		
-		input.close();
 		System.out.println(found? "Yes, " + name + " is in this array at index " + i + "!" : "No, " + name + " is not in this array.");
 		
 	}
 }
-	
